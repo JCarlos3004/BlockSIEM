@@ -1,0 +1,9 @@
+#fondo-critico {
+    text-align: center;
+    background-color: rgb(236, 98, 98);
+  }
+
+#fondo-nocritico {
+    text-align: center;
+    background-color: rgb(146, 231, 146);
+  }

@@ -1,0 +1,392 @@
+{% extends './layout.html' %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{{ url_for('static', filename='css/fondo-letras.css' ) }}" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Transacciones</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Lista de transacciones generadas
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                            <form action="" method="POST">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Timestap</th>
+                                            <th>Descripcion</th>
+                                            <th>Hash</th>
+                                            <th>Clasificacion</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX">
+                                            <td>TR00002</td>
+                                            <td>06/12/2022 22:36 </td>
+                                            <td>Log generado por equipo RH00001</td>
+                                            <td class="center">f2669fa0383c6c8b75d857393b321cbb86e282f7d07e8</td>
+                                            <td class="center" id="fondo-critico"><b>Critico</b></td>
+                                            <td class="center">Registrando en Blockchain...</td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                            <td>TR00004</td>
+                                            <td>06/12/2022 22:36</td>
+                                            <td>Log generado por equipo RH00001</td>
+                                            <td class="center">a894be674405f9a7909849cd96d250b1230dd2e6bb8d</td>
+                                            <td class="center" id="fondo-critico"><b>Critico</b></td>
+                                            <td class="center">Registrando en Blockchain...</td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td>TR00005</td>
+                                            <td>06/12/2022 22:36</td>
+                                            <td>Log generado por equipo RH00001</td>
+                                            <td class="center">e34b3d7a50227fa77fd17bf079683002ac351b1afd6f46</td>
+                                            <td class="center" id="fondo-critico"><b>Critico</b></td>
+                                            <td class="center">Registrando en Blockchain...</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td>TR00006</td>
+                                            <td>06/12/2022 22:36</td>
+                                            <td>Log generado por equipo TI00002</td>
+                                            <td class="center">1b4113bcef6c500c800436c10dea1c0b60a4f3073be</td>
+                                            <td class="center" id="fondo-critico"><b>Critico</b></td>
+                                            <td class="center">Registrando en Blockchain...</td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td>TR00007</td>
+                                            <td>06/12/2022 22:36</td>
+                                            <td>Log generado por equipo TI00001</td>
+                                            <td class="center">f7c29b57a950e6e816676d4f5d3ebd95eb1fdfbfaf0865b</td>
+                                            <td class="center" id="fondo-nocritico">No critico</td>
+                                            <td class="center">Registrando en Blockchain..</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td>TR00008</td>
+                                            <td>06/12/2022 22:36</td>
+                                            <td>Log generado por equipo RH00003</td>
+                                            <td class="center">48dc2ed3db494f605ba10d582f11c615e65219e63233d5</td>
+                                            <td class="center">Sin validar</td>
+                                            <td class="center">En espera de validacion</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>TR00009</td>
+                                            <td>06/12/2022 22:36</td>
+                                            <td>Log generado por equipo RH00002</td>
+                                            <td class="center">bc0727df3c25003ee07875519f159431db58d3cdf20535348</td>
+                                            <td class="center">Sin validar</td>
+                                            <td class="center">En espera de validacion</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            </div>
+                            <!-- /.table-responsive -->
+                            <!--
+                                <div class="well">
+                                    <h4>DataTables Usage Information</h4>
+                                    <p>DataTables is a very flexible, advanced tables plugin for jQuery. In SB Admin, we are using a specialized version of DataTables built for Bootstrap 3. We have also customized the table headings to use Font Awesome icons in place of images. For complete documentation on DataTables, visit their website at <a target="_blank" href="https://datatables.net/">https://datatables.net/</a>.</p>
+                                    <a class="btn btn-default btn-lg btn-block" target="_blank" href="https://datatables.net/">View DataTables Documentation</a>
+                                </div>
+                            -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <!--
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Kitchen Sink
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive ->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Basic Table
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+        <!--
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Striped Rows
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Bordered Table
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive table-bordered">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+        <!--    
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Hover Rows
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Context Classes
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="success">
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr class="info">
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr class="warning">
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                        <tr class="danger">
+                                            <td>4</td>
+                                            <td>John</td>
+                                            <td>Smith</td>
+                                            <td>@jsmith</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+        </div>
+    </div>
+   
+</body>
+</html>
+{% endblock %}
