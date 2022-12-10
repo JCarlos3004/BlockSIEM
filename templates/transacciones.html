@@ -26,75 +26,35 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="table-responsive">
-                            <form action="" method="POST">
+                            <form action="{{ url_for('blockchain' ) }}" method="POST">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Timestap</th>
+                                            <th>Timestamp</th>
                                             <th>Descripcion</th>
                                             <th>Hash</th>
                                             <th>Clasificacion</th>
+                                            <th>Bloque</th>
                                             <th>Estado</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="odd gradeX">
-                                            <td>TR00002</td>
-                                            <td>06/12/2022 22:36 </td>
-                                            <td>Log generado por equipo RH00001</td>
-                                            <td class="center">f2669fa0383c6c8b75d857393b321cbb86e282f7d07e8</td>
-                                            <td class="center" id="fondo-critico"><b>Critico</b></td>
-                                            <td class="center">Registrando en Blockchain...</td>
-                                        </tr>
-                                        <tr class="even gradeC">
-                                            <td>TR00004</td>
-                                            <td>06/12/2022 22:36</td>
-                                            <td>Log generado por equipo RH00001</td>
-                                            <td class="center">a894be674405f9a7909849cd96d250b1230dd2e6bb8d</td>
-                                            <td class="center" id="fondo-critico"><b>Critico</b></td>
-                                            <td class="center">Registrando en Blockchain...</td>
-                                        </tr>
-                                        <tr class="odd gradeA">
-                                            <td>TR00005</td>
-                                            <td>06/12/2022 22:36</td>
-                                            <td>Log generado por equipo RH00001</td>
-                                            <td class="center">e34b3d7a50227fa77fd17bf079683002ac351b1afd6f46</td>
-                                            <td class="center" id="fondo-critico"><b>Critico</b></td>
-                                            <td class="center">Registrando en Blockchain...</td>
-                                        </tr>
-                                        <tr class="even gradeA">
-                                            <td>TR00006</td>
-                                            <td>06/12/2022 22:36</td>
-                                            <td>Log generado por equipo TI00002</td>
-                                            <td class="center">1b4113bcef6c500c800436c10dea1c0b60a4f3073be</td>
-                                            <td class="center" id="fondo-critico"><b>Critico</b></td>
-                                            <td class="center">Registrando en Blockchain...</td>
-                                        </tr>
-                                        <tr class="odd gradeA">
-                                            <td>TR00007</td>
-                                            <td>06/12/2022 22:36</td>
-                                            <td>Log generado por equipo TI00001</td>
-                                            <td class="center">f7c29b57a950e6e816676d4f5d3ebd95eb1fdfbfaf0865b</td>
-                                            <td class="center" id="fondo-nocritico">No critico</td>
-                                            <td class="center">Registrando en Blockchain..</td>
-                                        </tr>
-                                        <tr class="even gradeA">
-                                            <td>TR00008</td>
-                                            <td>06/12/2022 22:36</td>
-                                            <td>Log generado por equipo RH00003</td>
-                                            <td class="center">48dc2ed3db494f605ba10d582f11c615e65219e63233d5</td>
-                                            <td class="center">Sin validar</td>
-                                            <td class="center">En espera de validacion</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>TR00009</td>
-                                            <td>06/12/2022 22:36</td>
-                                            <td>Log generado por equipo RH00002</td>
-                                            <td class="center">bc0727df3c25003ee07875519f159431db58d3cdf20535348</td>
-                                            <td class="center">Sin validar</td>
-                                            <td class="center">En espera de validacion</td>
-                                        </tr>
+                                        {% for j in data.n %}
+                                            <tr class="odd gradeX">
+                                                <td>{{ data.id[j-1] }}</td>
+                                                <td>{{ data.timestamp[j-1] }} </td>
+                                                <td>{{ data.descripcion[j-1] }}</td>
+                                                <td class="center">{{ data.hash[j-1] }}</td>
+                                                {% if data.clasificacion[j-1]=="Critico" %}
+                                                <td class="center" id="fondo-critico"><b>{{ data.clasificacion[j-1] }}</b></td>
+                                                {%else%}
+                                                <td class="center" id="fondo-nocritico"><b>{{ data.clasificacion[j-1] }}</b></td>
+                                                {% endif %}
+                                                <td class="center">Minado en el {{ data.bloques[j-1] }}</td>
+                                                <td class="center">En espera</td>
+                                            </tr>
+                                        {% endfor %}
                                     </tbody>
                                 </table>
                             </form>
