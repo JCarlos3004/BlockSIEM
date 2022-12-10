@@ -51,7 +51,7 @@
                                                 {%else%}
                                                 <td class="center" id="fondo-nocritico"><b>{{ data.clasificacion[j-1] }}</b></td>
                                                 {% endif %}
-                                                <td class="center">Minado en el {{ data.bloques[j-1] }}</td>
+                                                <td class="center">{{ data.bloques[j-1] }}</td>
                                                 <td class="center">En espera</td>
                                             </tr>
                                         {% endfor %}

@@ -3,59 +3,59 @@ $(function() {
     Morris.Area({
         element: 'morris-area-chart',
         data: [{
-            period: '2010 Q1',
-            iphone: 2666,
-            ipad: null,
-            itouch: 2647
+            period: '2022, 1 Dic',
+            critico: 32,
+            enespera: 30,
+            nocritico: 40
         }, {
-            period: '2010 Q2',
-            iphone: 2778,
-            ipad: 2294,
-            itouch: 2441
+            period: '2022, 1 Dic',
+            critico: 29,
+            enespera: 31,
+            nocritico: 14
         }, {
-            period: '2010 Q3',
-            iphone: 4912,
-            ipad: 1969,
-            itouch: 2501
+            period: '2022, 1 Dic',
+            critico: 51,
+            enespera: 15,
+            nocritico: 27
         }, {
-            period: '2010 Q4',
-            iphone: 3767,
-            ipad: 3597,
-            itouch: 5689
+            period: '2022, 1 Dic',
+            critico: 41,
+            enespera: 37,
+            nocritico: 18
         }, {
-            period: '2011 Q1',
-            iphone: 6810,
-            ipad: 1914,
-            itouch: 2293
+            period: '2022, 2 Dic',
+            critico: 37,
+            enespera: 50,
+            nocritico: 41
         }, {
-            period: '2011 Q2',
-            iphone: 5670,
-            ipad: 4293,
-            itouch: 1881
+            period: '2022, 2 Dic',
+            critico: 54,
+            enespera: 13,
+            nocritico: 16
         }, {
-            period: '2011 Q3',
-            iphone: 4820,
-            ipad: 3795,
-            itouch: 1588
+            period: '2022, 2 Dic',
+            critico: 71,
+            enespera: 19,
+            nocritico: 26
         }, {
-            period: '2011 Q4',
-            iphone: 15073,
-            ipad: 5967,
-            itouch: 5175
+            period: '2022, 2 Dic',
+            critico: 31,
+            enespera: 47,
+            nocritico: 40
         }, {
-            period: '2012 Q1',
-            iphone: 10687,
-            ipad: 4460,
-            itouch: 2028
+            period: '2022, 3 Dic',
+            critico: 43,
+            enespera: 21,
+            nocritico: 31
         }, {
-            period: '2012 Q2',
-            iphone: 8432,
-            ipad: 5713,
-            itouch: 1791
+            period: '2022, 3 Dic',
+            critico: 67,
+            enespera: 57,
+            nocritico: 14
         }],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: ['critico', 'nocritico','enespera'],
+        labels: ['critico', 'nocritico','enespera'],
         pointSize: 2,
         hideHover: 'auto',
         resize: true
@@ -64,14 +64,14 @@ $(function() {
     Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
-            label: "Download Sales",
-            value: 12
+            label: "Logs Red",
+            value: 400
         }, {
-            label: "In-Store Sales",
-            value: 30
+            label: "En espera de veficicación",
+            value: 200
         }, {
-            label: "Mail-Order Sales",
-            value: 20
+            label: "Logs Kernel",
+            value: 420
         }],
         resize: true
     });
@@ -79,37 +79,24 @@ $(function() {
     Morris.Bar({
         element: 'morris-bar-chart',
         data: [{
-            y: '2006',
+            y: '1 Dic',
+            a: 75,
+            b: 65,
+            c: 100
+        }, {
+            y: '2 Dic',
+            a: 75,
+            b: 65,
+            c: 100
+        }, {
+            y: '3 Dic',
             a: 100,
-            b: 90
-        }, {
-            y: '2007',
-            a: 75,
-            b: 65
-        }, {
-            y: '2008',
-            a: 50,
-            b: 40
-        }, {
-            y: '2009',
-            a: 75,
-            b: 65
-        }, {
-            y: '2010',
-            a: 50,
-            b: 40
-        }, {
-            y: '2011',
-            a: 75,
-            b: 65
-        }, {
-            y: '2012',
-            a: 100,
-            b: 90
+            b: 90,
+            c: 100
         }],
         xkey: 'y',
-        ykeys: ['a', 'b'],
-        labels: ['Series A', 'Series B'],
+        ykeys: ['a', 'b','c'],
+        labels: ['Criticos', 'No criticos','En espera'],
         hideHover: 'auto',
         resize: true
     });

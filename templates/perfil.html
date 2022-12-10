@@ -1,0 +1,98 @@
+{% extends './layout.html' %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <div id="wrapper">
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Perfil de usuario</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Datos
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label>Nombre: </label>
+                                            <input class="form-control" placeholder="Jean Carlos">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Apellidos: </label>
+                                            <input class="form-control" placeholder="Mendoza Quispe">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Cargo: </label>
+                                            <input class="form-control" placeholder="Seguridad de Sistemas">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Correo electronico: </label>
+                                            <p class="form-control-static">jcmendoza@uni.pe</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Subir una fotografía</label>
+                                            <input type="file">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Descripción</label>
+                                            <textarea class="form-control" rows="3">Se encarga de proteger la información ante posibles ciberataques y fugas de datos, De esta manera, garantiza la seguridad dentro de las posibilidades tanto humanas, técnicas como económicas que tenga cada empresa. </textarea>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-default">Guardar</button>
+                                        <button href="/index"  class="btn btn-default">Salir</button>
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <fieldset disabled>
+                                            <div class="form-group">
+                                                <label for="disabledSelect">Fecha de Nacimiento</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="30 April, 1998" disabled>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="disabledSelect">Sexo</label>
+                                                <input class="form-control" placeholder="Masculino">
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                    <h3>Contacto</h3>
+                                    <form role="form">
+                                        <div class="form-group input-group">
+                                            <span class="input-group-addon">+51</span>
+                                            <input type="text" class="form-control" placeholder="970145860">
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+</body>
+
+</html>
+{% endblock %}

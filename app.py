@@ -34,11 +34,9 @@ def transacciones():
               'clasificacion':logs["Clasificacion"].to_list(),
               'bloques':logs["Bloque"].to_list()}
     return render_template("transacciones.html", data=logs_1)
-x = 2
+
 @app.route('/blockchain', methods=['POST','GET'])
 def blockchain():
-    global x
-    x=x+1
     if request.method=='POST':
         bloque = request.form.get("block")
     logs = pd.read_csv('logs.csv', sep=";")
@@ -49,11 +47,13 @@ def blockchain():
               'hash': [ hashlib.sha256(str(i).encode()).hexdigest()[:20]+"..." for i in range(len(logs["n"]))],
               'hash_c':  [ hashlib.sha256(str(i).encode()).hexdigest() for i in range(len(logs["n"]))],
               'clasificacion':logs["Clasificacion"].to_list(),
-              'bloques':logs["Bloque"].to_list(),
-              'x':x}
+              'bloques':logs["Bloque"].to_list()}
 
-    print(x)
     return render_template("blockchain.html", data=logs_1)
+
+@app.route('/perfil')
+def perfil():
+    return render_template("perfil.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
