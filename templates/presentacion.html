@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+  <title>BLOCKSIEM</title>
+  <link href="{{ url_for('static', filename='css/bootstrap1.css' ) }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/maicons.css' ) }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/animate/animate.css' ) }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/owl-carousel/css/owl.carousel.css' ) }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/fancybox/css/jquery.fancybox.css' ) }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/theme.css' ) }}" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
+
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a href="presentacion.html" class="navbar-brand">BLOCK<span class="text-primary">SIEM</span></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+            <li class="nav-item active">
+            	<a href="presentacion.html" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Beneficios</a>
+            </li>
+            <li class="nav-item">
+             <a href="about.html" class="nav-link">Nosotros</a>
+            </li>
+          </ul>
+        </div>
+      </div> <!-- .container -->
+    </nav> <!-- .navbar -->
+
+  </header>
+
+  <main>
+    <div class="page-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 py-3">
+            <h2 class="title-section">Nosotros somos <span class="fg-primary"> un equipo profesional</span> que implementa soluciones de ciberseguridad para tu negocio</h2>
+
+            <p>Una solución de ciberseguridad que enfocada en la aplicación de Blockchain a un sistema SIEM el cuál registra logs de seguridad que generan activos no-críticos en cadena de bloques para garantizar su integridad durante la trazabilidad de posibles ataques y ante posibles audtorías</p>
+
+            <a href="login" class="btn btn-primary mt-4">Ver DEMO</a>
+          </div>
+          <div class="col-lg-6 py-3">
+            <div class="about-img">
+				<iframe width="500" height="345" src="https://www.youtube.com/embed/6qBKNAnWcUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .page-section -->
+
+    <div class="page-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="title-section">Te ofrecemos</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-6 col-xl-6 py-3 mb-3">
+            <div class="text-center">
+              <div class="img-fluid mb-4">
+                <img src="{{ url_for('static', filename='img/icons/web_development.svg' ) }}" alt="">
+              </div>
+              <h5>Blockchain</h5>
+			  <p>Garantizar que ningún evento pueda ser eliminado o modificado. Incluso por los administradores del sistema.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-6 py-3 mb-3">
+            <div class="text-center">
+              <div class="img-fluid mb-4">
+                <img src="{{ url_for('static', filename='img/icons/graphics_design.svg' ) }}"  alt="">
+              </div>
+              <h5>Integridad de logs</h5>
+			  <p>Todos los tipos de acciones relacionadas con los logs: eliminación, modificación, inserción, etc., se pueden rastrear fácilmente.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-6 py-3 mb-3">
+            <div class="text-center">
+              <div class="img-fluid mb-4">
+                <img src="{{ url_for('static', filename='img/icons/graphics_design.svg' ) }}"  alt="">
+              </div>
+              <h5>Cumplimiento normativo</h5>
+			  <p>Transparencia en auditorías. Genere informes de cumplimiento.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-6 py-3 mb-3">
+            <div class="text-center">
+              <div class="img-fluid mb-4">
+                <img <img src="{{ url_for('static', filename='img/icons/customer_services.svg' ) }}"  alt="">
+              </div>
+              <h5>Reportes</h5>
+			      <p>Visualización de registros de logs en las cadenas de bloques en tiempo real a través de gráficos.</p>
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 py-3">
+          <h3>BLOCK<span class="fg-primary">SIEM</span></h3>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>información de contacto</h5>
+          <p>Email: Blocksiem-contact@gmail.com</p>
+          <p>Phone: +51 999888777</p>
+        </div>
+      </div>
+
+      <hr>
+
+    </div>
+  </footer>
+  <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='vendor/owl-carousel/js/owl.carousel.min.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='vendor/fancybox/js/jquery.fancybox.min.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope/isotope.pkgd.min.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='js/google-maps.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='js/theme.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='vendor/wow/wow.min.js' ) }}"></script>
+
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script> -->
+
+</body>
+</html>

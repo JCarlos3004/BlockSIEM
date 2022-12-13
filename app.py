@@ -4,8 +4,6 @@ import hashlib
 
 app = Flask(__name__)
 
-
-@app.route('/')
 @app.route('/index')
 def index():
     return render_template("index.html")
@@ -13,7 +11,7 @@ def index():
 
 @app.route('/login')
 def login():
-    return render_template("login")
+    return render_template("login.html")
 
 @app.route('/layout')
 def layout():
@@ -54,6 +52,20 @@ def blockchain():
 @app.route('/perfil')
 def perfil():
     return render_template("perfil.html")
+
+@app.route('/')
+@app.route('/presentacion.html')
+def presentacion():
+    return render_template("presentacion.html")
+
+
+@app.route('/services.html')
+def services():
+    return render_template("services.html")
+
+@app.route('/about.html')
+def about():
+    return render_template("about.html")
 
 if __name__ == '__main__':
     app.run(debug=True)

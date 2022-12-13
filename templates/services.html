@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+  <title>BlockSIEM</title>
+
+  <link href="{{ url_for('static', filename='css/bootstrap1.css' ) }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/maicons.css' ) }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/animate/animate.css' ) }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/owl-carousel/css/owl.carousel.css' ) }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/fancybox/css/jquery.fancybox.css' ) }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/theme.css' ) }}" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
+
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a href="presentacion.html" class="navbar-brand">BLOCK<span class="text-primary">SIEM</span></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+            <li class="nav-item">
+              <a href="presentacion.html" class="nav-link">Inicio</a>
+            </li>
+			      <li class="nav-item active">
+				      <a href="services.html" class="nav-link">Beneficios</a>
+			      </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">Nosotros</a>
+            </li>
+          </ul>
+        </div>
+      </div> <!-- .container -->
+    </nav> <!-- .navbar -->
+
+  </header>
+
+  <main>
+    <div class="page-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="title-section">Nuestros beneficios</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-6 col-xl-6 py-3 mb-3">
+            <div class="text-center">
+              <div class="img-fluid mb-4">
+                <img src="{{ url_for('static', filename='img/icons/graphics_design.svg' ) }}" alt="">
+              </div>
+              <h5>Almacenamiento seguro</h5>
+              <p>Garantiza el almacenamiento seguro de los logs mediante descentralización y la información cifrada</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-6 py-3 mb-3">
+            <div class="text-center">
+              <div class="img-fluid mb-4">
+                <img src="{{ url_for('static', filename='img/icons/graphics_design.svg' ) }}" alt="">
+              </div>
+              <h5>Disponibilidad</h5>
+              <p>Te ofrecemos alta disponibilidad del servicio para garantizar la continuidad ininterrumpida de registros de logs</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-6 py-3 mb-3">
+            <div class="text-center">
+              <div class="img-fluid mb-4">
+                <img src="{{ url_for('static', filename='img/icons/seo_and_marketing.svg' ) }}" alt="">
+              </div>
+              <h5>Inmutabilidad</h5>
+              <p>Garantizamos que los registros de logs en un libro mayor de blockchain permanezca como un historial permanente, indeleble e inalterable</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-6 py-3 mb-3">
+            <div class="text-center">
+              <div class="img-fluid mb-4">
+                <img src="{{ url_for('static', filename='img/icons/customer_services.svg' ) }}" alt="">
+              </div>
+              <h5>Descentralización</h5>
+              <p>No almacene los registros de logs en un solo lugar, te ofrecemos múltiples copias de los logs entre todos los nodos de la blockchain</p>
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+    
+  </main>
+
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 py-3">
+          <h3>BLOCK<span class="fg-primary">SIEM</span></h3>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>información de contacto</h5>
+          <p>Email: Blocksiem-contact@gmail.com</p>
+          <p>Phone: +51 999888777</p>
+        </div>
+      </div>
+
+      <hr>
+
+    </div>
+  </footer>
+
+  
+  <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='vendor/owl-carousel/js/owl.carousel.min.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='vendor/fancybox/js/jquery.fancybox.min.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope/isotope.pkgd.min.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='js/google-maps.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='js/theme.js' ) }}"></script>
+  <script src="{{ url_for('static', filename='vendor/wow/wow.min.js' ) }}"></script>
+</body>
+</html>
