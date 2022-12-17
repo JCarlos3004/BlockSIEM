@@ -38,10 +38,6 @@
     position: relative;
 }
 
-.switch-button_1 .switch-button__checkbox:checked + .switch-button__label {
-    background-color: var(--color-green);
-}
-
 .switch-button .switch-button__checkbox:checked + .switch-button__label {
     background-color: var(--color-green);
 }
